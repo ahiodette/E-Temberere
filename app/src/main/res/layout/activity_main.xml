@@ -12,12 +12,42 @@
     android:src="@drawable/ingagi"
     android:scaleType="centerCrop"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/u"
+        android:text="U"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="85sp"
+        android:textStyle="bold"
+        android:textColor="@color/inyuguti"
+        />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="U RWANDA!"
-
+        android:id="@+id/rwanda"
+        android:text="RWANDA"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/u"
+        android:textSize="85sp"
+        android:textStyle="bold"
+        android:textColor="@color/inyuguti"
         />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/shaka"
+        android:textColor="@color/buto"
+        android:background="@color/gusiga"
+        android:shadowColor="@color/inyuguti"
+        android:text="Search places"
+        android:textSize="40sp"/>
 
 </RelativeLayout>
