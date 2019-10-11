@@ -9,13 +9,15 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:id="@+id/back"
-    android:src="@drawable/main"
-    android:scaleType="fitCenter"/>
+    android:src="@drawable/ingagi"
+    android:scaleType="centerCrop"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="U RWANDA!"
+
+        />
 
 </RelativeLayout>
