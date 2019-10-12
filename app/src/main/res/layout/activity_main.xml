@@ -37,21 +37,7 @@
         android:textColor="@color/inyuguti"
         />
 
-    <EditText
-        android:id="@+id/ahantu"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_above="@id/shaka"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="238dp"
-        android:hint="Where are you?"
-        android:shadowColor="@color/buto"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorHint="@color/inyuguti"
-        android:textColorLink="@color/buto"
-        android:textCursorDrawable="@drawable/back"
-        android:textSize="20sp" />
+
 
     <Button
         android:layout_width="350dp"

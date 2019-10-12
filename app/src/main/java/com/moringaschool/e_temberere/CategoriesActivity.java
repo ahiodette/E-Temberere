@@ -14,8 +14,7 @@ import butterknife.ButterKnife;
 
 
 public class CategoriesActivity extends AppCompatActivity {
-    @BindView(R.id.categories_title) TextView cTitle;
-    @BindView(R.id.categoriesList) ListView cList;
+   
     public static final String TAG = CategoriesActivity.class.getSimpleName();
 
     private String[] categories = new String[]{"Parks", "Museums", "Lakes", "Others places(Hotels, Cultural shops,...)"};

@@ -1,62 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+   android:orientation="vertical"
     tools:context=".CategoriesActivity">
 
 
-    <TextView
-        android:id="@+id/categories_title"
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
+    <EditText
+        android:id="@+id/ahantu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@id/shaka"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:hint="Search?"
         android:shadowColor="@color/buto"
-        android:text="Where do you want travelling to?"
-        android:textSize="28sp" />
-    <GridView
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
-
-    <ImageView
-        android:id="@+id/imageView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textColorHint="@color/inyuguti"
+        android:textColorLink="@color/buto"
+        android:textCursorDrawable="@drawable/back"
+        android:textSize="20sp" />
+    <SearchView
+        android:id="@+id/simpleSearchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:queryHint="Search place"/>
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
 
-        <ImageView
-            android:id="@+id/imageView2"
+    <ImageView
+            android:id="@+id/kivu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/kivu" />
 
-        <ImageView
-            android:id="@+id/imageView6"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_gravity="center"
+            android:textColor="@color/gusiga"/>
 
-    </GridView>
-</RelativeLayout>
+
+
+
+</LinearLayout>
