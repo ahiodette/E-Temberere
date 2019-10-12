@@ -9,7 +9,8 @@ public class CategoriesAdapter extends BaseAdapter {
     private Context print;
     private String[] categs;
 
-    public CategoriesAdapter(Context print, String[] categs) {
+    public CategoriesAdapter(Context print, int resource, String[] categs) {
+        super(print, resource);
         this.print = print;
         this.categs = categs;
     }
@@ -22,7 +23,7 @@ public class CategoriesAdapter extends BaseAdapter {
     @Override
     public Object getItem(int position) {
         String category = categs[position];
-        return String.format(category);
+        return String.format("%s",category);
     }
 
     @Override

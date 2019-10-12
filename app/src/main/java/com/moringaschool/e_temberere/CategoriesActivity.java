@@ -28,7 +28,7 @@ public class CategoriesActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
-        CategoriesAdapter adapter = new CategoriesAdapter(this,  categories);
+        CategoriesAdapter adapter = new CategoriesAdapter(this, android.R.layout.simple_list_item_1, categories);
         cList.setAdapter(adapter);
         cList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

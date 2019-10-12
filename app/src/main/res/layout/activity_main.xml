@@ -40,9 +40,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:hint="Where are you"
+        android:layout_below="@id/rwanda"
+        android:layout_marginTop="238dp"
+        android:hint="Where are you?"
+        android:id="@+id/ahantu"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/inyuguti"
-        />
+        android:textSize="20sp" />
 
     <Button
         android:layout_width="350dp"
