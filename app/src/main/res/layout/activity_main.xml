@@ -37,6 +37,13 @@
         android:textColor="@color/inyuguti"
         />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:hint="Where are you"
+        android:textColor="@color/inyuguti"
+        />
+
     <Button
         android:layout_width="350dp"
         android:layout_height="wrap_content"

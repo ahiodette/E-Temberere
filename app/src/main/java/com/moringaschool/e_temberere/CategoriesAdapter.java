@@ -1,20 +1,28 @@
 package com.moringaschool.e_temberere;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 public class CategoriesAdapter extends BaseAdapter {
+    private Context print;
+    private String[] categs;
 
+    public CategoriesAdapter(Context print, String[] categs) {
+        this.print = print;
+        this.categs = categs;
+    }
 
     @Override
     public int getCount() {
-        return 0;
+        return categs.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        String category = categs[position];
+        return String.format(category);
     }
 
     @Override
