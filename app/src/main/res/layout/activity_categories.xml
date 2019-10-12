@@ -25,10 +25,10 @@
         android:footerDividersEnabled="false">
 
     <ImageView
-        android:id="@+id/icon"
+        android:id="@+id/photo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/textView"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="@dimen/activity_horizontal_margin"
-        android:textColor="@color/black" />
+        android:textColor="@color/gusiga" />
 
     </ListView>
 

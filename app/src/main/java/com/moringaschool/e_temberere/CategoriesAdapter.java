@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class CategoriesAdapter extends BaseAdapter {
     Context print;
@@ -38,7 +40,10 @@ public class CategoriesAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         view = inflater.inflate(R.layout.activity_categories,null);
-
+        TextView textView = (TextView) view.findViewById(R.id.textView);
+        ImageView photo = (ImageView) view.findViewById(R.id.photo);
+        textView.setText(details[position]);
+        photo.setImageResource(pictures[position]);
         return null;
     }
 
