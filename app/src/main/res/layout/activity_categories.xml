@@ -8,21 +8,7 @@
     tools:context=".CategoriesActivity">
 
 
-    <EditText
-        android:id="@+id/ahantu"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_above="@id/shaka"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:hint="Search?"
-        android:shadowColor="@color/buto"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorHint="@color/inyuguti"
-        android:textColorLink="@color/buto"
-        android:textCursorDrawable="@drawable/back"
-        android:textSize="20sp" />
+
     <SearchView
         android:id="@+id/simpleSearchView"
         android:layout_width="wrap_content"
@@ -30,20 +16,28 @@
         android:queryHint="Search place"/>
 
 
+    <ListView
+        android:id="@+id/categoryList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false">
+
     <ImageView
-            android:id="@+id/kivu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher" />
 
-            android:src="@drawable/kivu" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textColor="@color/black" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/gusiga"/>
-
-
-
+    </ListView>
 
 </LinearLayout>
