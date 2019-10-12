@@ -38,14 +38,19 @@
         />
 
     <EditText
+        android:id="@+id/ahantu"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_below="@id/rwanda"
+        android:layout_height="40dp"
+        android:layout_above="@id/shaka"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="238dp"
         android:hint="Where are you?"
-        android:id="@+id/ahantu"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/inyuguti"
+        android:shadowColor="@color/buto"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textColorHint="@color/inyuguti"
+        android:textColorLink="@color/buto"
+        android:textCursorDrawable="@drawable/back"
         android:textSize="20sp" />
 
     <Button

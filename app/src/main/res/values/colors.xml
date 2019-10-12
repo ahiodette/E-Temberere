@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#F71106</color>
     <color name="colorAccent">#D81B60</color>
     <color name="inyuguti">#FFFFFF</color>
-    <color name="buto">#4CAF50</color>
+    <color name="buto">#42B647</color>
     <color name="gusiga">#464040</color>
 </resources>
