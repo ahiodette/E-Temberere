@@ -27,7 +27,7 @@ public class CategoriesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categories);
         ButterKnife.bind(this);
 
-        CategoriesAdapter adapter = new CategoriesAdapter(this,details);
+        CategoriesAdapter adapter = new CategoriesAdapter(this,android.R.layout.simple_list_item_1, details);
         list.setAdapter(adapter);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

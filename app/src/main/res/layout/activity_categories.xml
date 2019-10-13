@@ -24,8 +24,4 @@
         android:dividerHeight="1dp"
         android:footerDividersEnabled="true"/>
 
-
-
-
-
 </LinearLayout>
