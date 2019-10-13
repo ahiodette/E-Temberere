@@ -14,17 +14,18 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class CategoriesAdapter extends ArrayAdapter {
+public class CategoriesAdapter extends BaseAdapter {
     private Context print;
     private String[] details;
+    private int[] pictures;
 
-    LayoutInflater inflater;
 
 
-    public CategoriesAdapter( Context print, int resource, String[] details) {
-        super(print, resource);
+
+    public CategoriesAdapter(Context print, String[] details, int[] pictures) {
         this.print = print;
         this.details = details;
+        this.pictures = pictures;
     }
 
     @Override
@@ -32,11 +33,27 @@ public class CategoriesAdapter extends ArrayAdapter {
         return details.length;
     }
 
-    @Nullable
     @Override
     public Object getItem(int position) {
-        String place = details[position];
+        return null;
+    }
 
-        return String.format("%s",place);
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        LayoutInflater inflater = (LayoutInflater) print
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View view = inflater.inflate(R.layout.customlayout, null);
+        ImageView image = (ImageView) view.findViewById(R.id.sitePicture);
+        TextView name = (TextView) view.findViewById(R.id.siteName);
+
+        image.setImageResource(pictures[position]);
+        name.setText(details[position]);
+        return view;
     }
 }
