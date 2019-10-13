@@ -27,7 +27,7 @@ public class CategoriesActivity extends AppCompatActivity {
             R.drawable.round
     };
      String[] details = {
-             "Parks",
+             "Parks and forests",
              "Museums",
              "Lakes",
              "Caves",
@@ -48,7 +48,6 @@ public class CategoriesActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Toast.makeText(CategoriesActivity.this, details, Toast.LENGTH_LONG).show();
                 Intent places = new Intent(CategoriesActivity.this, ParksActivity.class);
                 startActivity(places);
             }
