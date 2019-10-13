@@ -12,31 +12,31 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.shaka)
     Button search;
-    @BindView(R.id.ahantu)
-    EditText hehe;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
 
-        search.setOnClickListener(this);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
+
+                startActivity(intent);
+
+            }
+        });
 
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v == search) {
-            String location = hehe.getText().toString();
-            Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
-            intent.putExtra("location", location);
-            startActivity(intent);
-        }
-    }
 }
