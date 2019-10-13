@@ -1,93 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".ParksActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="PARKS IN RWANDA"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"/>
+
 
     <ImageView
         android:id="@+id/park"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="186dp"
+        android:layout_height="210dp"
         android:layout_alignParentLeft="true"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/nyungwe" />
 
     <ImageView
         android:id="@+id/park1"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="186dp"
+        android:layout_height="211dp"
         android:layout_alignParentLeft="true"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/akagera" />
 
     <ImageView
         android:id="@+id/park2"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="209dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="263dp"
+
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:src="@drawable/gishwati" />
 
     <ImageView
         android:id="@+id/park3"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="44dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:src="@drawable/volcano" />
 
     <ImageView
         android:id="@+id/park4"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="189dp"
+        android:layout_height="221dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="484dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:src="@drawable/park" />
 
-    <ImageView
-        android:id="@+id/park5"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        app:srcCompat="@mipmap/ic_launcher_round" />
 
-    <ImageView
-        android:id="@+id/park6"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        app:srcCompat="@mipmap/ic_launcher_round" />
-
-</LinearLayout>
+</RelativeLayout>
