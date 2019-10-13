@@ -25,3 +25,4 @@ In case you may need any support about this app, do not hesitate to contact the 
 
 ## Licence and copyright
 This app is licenced by MIT
+Allrights reserved (c) @2019| Odette Ahishakiye
