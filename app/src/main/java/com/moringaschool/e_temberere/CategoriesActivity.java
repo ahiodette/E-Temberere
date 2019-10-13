@@ -55,9 +55,6 @@ public class CategoriesActivity extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
-//        String title = intent.getStringExtra("title");
-//        CategoriesAdapter adapter = new CategoriesAdapter(this, categories);
-//        cList.setAdapter(adapter);
 
     }
 }
