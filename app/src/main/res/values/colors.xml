@@ -3,7 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="inyuguti">#FFFFFF</color>
+    <color name="inyuguti">#FFFDFD</color>
     <color name="buto">#42B647</color>
     <color name="gusiga">#464040</color>
 </resources>
