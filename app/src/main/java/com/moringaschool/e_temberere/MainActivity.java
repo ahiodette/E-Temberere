@@ -15,8 +15,8 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.shaka)
-    Button search;
+    @BindView(R.id.shaka) Button search;
+    @BindView(R.id.place) EditText location;
 
 
     @Override
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String city = location.getText().toString();
                 Toast.makeText(MainActivity.this,"Welcome to thousands hills country", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
 
