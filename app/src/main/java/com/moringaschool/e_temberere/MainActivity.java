@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 String city = location.getText().toString();
                 Toast.makeText(MainActivity.this,"Welcome to thousands hills country", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
-
+                intent.putExtra("city", city);
                 startActivity(intent);
 
             }

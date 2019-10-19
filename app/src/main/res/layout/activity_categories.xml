@@ -7,10 +7,23 @@
    android:orientation="vertical"
     tools:context=".CategoriesActivity">
 
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:visibility="gone" />
 
     <SearchView
-        android:id="@+id/place"
+        android:id="@+id/searchBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:queryHint="Search by place"/>
