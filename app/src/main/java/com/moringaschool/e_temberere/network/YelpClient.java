@@ -1,4 +1,4 @@
-package com.moringaschool.e_temberere;
+package com.moringaschool.e_temberere.network;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.moringaschool.e_temberere.Unchangeable.YELP_API_KEY;
-import static com.moringaschool.e_temberere.Unchangeable.YELP_BASE_URL;
+import static com.moringaschool.e_temberere.ui.Unchangeable.YELP_API_KEY;
+import static com.moringaschool.e_temberere.ui.Unchangeable.YELP_BASE_URL;
 
 public class YelpClient {
     private static Retrofit retrofit = null;

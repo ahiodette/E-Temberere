@@ -1,9 +1,10 @@
 
-package com.moringaschool.e_temberere;
+package com.moringaschool.e_temberere.models;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
 
 public class Business {
 
@@ -58,13 +59,13 @@ public class Business {
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public Business() {
     }
 
     /**
-     * 
+     *
      * @param displayPhone
      * @param distance
      * @param rating

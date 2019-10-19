@@ -1,5 +1,5 @@
 
-package com.moringaschool.e_temberere;
+package com.moringaschool.e_temberere.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

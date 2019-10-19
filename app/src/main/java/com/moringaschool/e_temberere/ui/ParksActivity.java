@@ -1,8 +1,10 @@
-package com.moringaschool.e_temberere;
+package com.moringaschool.e_temberere.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.moringaschool.e_temberere.R;
 
 public class ParksActivity extends AppCompatActivity {
 

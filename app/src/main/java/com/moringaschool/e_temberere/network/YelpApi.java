@@ -1,4 +1,7 @@
-package com.moringaschool.e_temberere;
+package com.moringaschool.e_temberere.network;
+
+
+import com.moringaschool.e_temberere.models.ApiClass;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
