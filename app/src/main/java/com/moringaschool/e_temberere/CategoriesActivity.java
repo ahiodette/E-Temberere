@@ -7,16 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
 
 
 public class CategoriesActivity extends AppCompatActivity {
 
     @BindView(R.id.categoryList) ListView list;
+    @BindView(R.id.place) SearchView searchView;
 
     int[] pictures={
             R.drawable.park,
@@ -54,6 +57,11 @@ public class CategoriesActivity extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
+
+
+        YelpApi client = YelpClient.getClient();
+
+//        Call<ApiClass> call = client.getSites(place, "travelling");
 
     }
 }

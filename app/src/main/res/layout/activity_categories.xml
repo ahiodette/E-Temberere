@@ -10,10 +10,10 @@
 
 
     <SearchView
-        android:id="@+id/simpleSearchView"
+        android:id="@+id/place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:queryHint="Search place"/>
+        android:queryHint="Search by place"/>
 
 
     <ListView
