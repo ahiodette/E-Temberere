@@ -42,7 +42,8 @@ public class SitesListAdapter extends RecyclerView.Adapter<CategoriesAdapter.Sit
 
         public void bindSite(Business site){
             nameView.setText(site.getName());
-            categoryView.setText("Rating:"+site.getRating()+"/5");
+            categoryView.setText(site.getCategories().get(0).getTitle());
+            ratingView.setText("Rating:"+site.getRating()+"/5");
         }
     }
 }
