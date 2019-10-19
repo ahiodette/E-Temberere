@@ -1,4 +1,4 @@
-package com.moringaschool.e_temberere;
+package com.moringaschool.e_temberere.adapters;
 
 import android.content.Context;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.moringaschool.e_temberere.R;
 import com.moringaschool.e_temberere.models.Business;
 import com.moringaschool.e_temberere.ui.CategoriesAdapter;
 
@@ -17,11 +18,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SitesListAdapter extends RecyclerView.Adapter<CategoriesAdapter.SitesViewHolder> {
-    private List<Business> sList;
+    private List<Business> sites;
     private Context myContext;
 
     public SitesListAdapter(List<Business> sList, Context myContext) {
-        this.sList = sList;
+        this.sites = sList;
         this.myContext = myContext;
     }
 
@@ -37,6 +38,11 @@ public class SitesListAdapter extends RecyclerView.Adapter<CategoriesAdapter.Sit
             super(itemView);
             ButterKnife.bind(this, itemView);
             myContext = itemView.getContext();
+        }
+
+        public void bindSite(Business site){
+            nameView.setText(site.getName());
+            categoryView.setText("Rating:"+site.getRating()+"/5");
         }
     }
 }
