@@ -15,8 +15,16 @@ import android.widget.TextView;
 
 import com.moringaschool.e_temberere.R;
 import com.moringaschool.e_temberere.models.Business;
+import com.moringaschool.e_temberere.models.Category;
+import com.squareup.picasso.Picasso;
+
+import org.parceler.Parcels;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -52,22 +60,20 @@ public class SiteDetailFragment extends Fragment {
         // Required empty public constructor
     }
 
-   
-    public static SiteDetailFragment newInstance(String param1, String param2) {
-        SiteDetailFragment fragment = new SiteDetailFragment();
+
+    public static SiteDetailFragment newInstance(Business site) {
+        SiteDetailFragment siteDetailsFragment = new SiteDetailFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+        args.putParcelable("site", Parcels.wrap(site));
+        siteDetailsFragment.setArguments(args);
+        return siteDetailsFragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            site = Parcels.unwrap(getArguments().getParcelable("site"));
         }
     }
 
@@ -75,7 +81,25 @@ public class SiteDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_site_detail, container, false);
+        View view = inflater.inflate(R.layout.fragment_site_detail, container, false);
+        ButterKnife.bind(this,view);
+
+        Picasso.get().load(site.getImageUrl()).into(siteImage);
+
+        List<String> siteCategories = new ArrayList<>();
+
+        for (Category siteCategory: site.getCategories()){
+            siteCategories.add(siteCategory.getTitle());
+        }
+
+        siteName.setText(site.getName());
+        category.setText(android.text.TextUtils.join(", ",siteCategories));
+        rating.setText(Double.toString(site.getRating())+"/5");
+        phone.setText(site.getPhone());
+        address.setText(site.getLocation().toString());
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
