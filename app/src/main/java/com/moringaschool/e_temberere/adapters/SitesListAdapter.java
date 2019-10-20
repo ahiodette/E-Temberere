@@ -61,6 +61,7 @@ public class SitesListAdapter extends RecyclerView.Adapter<SitesListAdapter.Site
             super(itemView);
             ButterKnife.bind(this, itemView);
             myContext = itemView.getContext();
+            itemView.setOnClickListener(this);
         }
 
         public void bindSite(Business site){
