@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.moringaschool.e_temberere.R;
+
 public class SiteDetailsActivity extends AppCompatActivity {
 
     @Override
