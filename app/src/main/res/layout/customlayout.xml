@@ -34,7 +34,7 @@
         android:layout_marginEnd="34dp"
         android:layout_toEndOf="@+id/sitePicture"
         android:text="Site"
-        android:textSize="30sp"
+        android:textSize="20sp"
         tools:ignore="RtlCompat,UnknownId" />
 
         <TextView
