@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.moringaschool.e_temberere.R;
 import com.moringaschool.e_temberere.models.Business;
 import com.moringaschool.e_temberere.ui.CategoriesAdapter;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -63,6 +64,7 @@ public class SitesListAdapter extends RecyclerView.Adapter<SitesListAdapter.Site
         }
 
         public void bindSite(Business site){
+            Picasso.get().load(site.getImageUrl()).into(pictureView);
             nameView.setText(site.getName());
             categoryView.setText(site.getCategories().get(0).getTitle());
             ratingView.setText("Rating:"+site.getRating()+"/5");
