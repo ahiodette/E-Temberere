@@ -1,6 +1,8 @@
 package com.moringaschool.e_temberere.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.moringaschool.e_temberere.R;
+import com.moringaschool.e_temberere.adapters.SitesListAdapter;
 import com.moringaschool.e_temberere.models.ApiClass;
 import com.moringaschool.e_temberere.models.Business;
 import com.moringaschool.e_temberere.models.Category;
@@ -28,10 +31,12 @@ import retrofit2.Response;
 
 public class CategoriesActivity extends AppCompatActivity {
 
-    @BindView(R.id.categoryList) ListView list;
-
+    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
     @BindView(R.id.progress) ProgressBar progress;
+    private SitesListAdapter listAdapter;
+
+    public List<Business> sites;
 
 //    int[] pictures={
 //            R.drawable.park,
@@ -57,19 +62,21 @@ public class CategoriesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_categories);
         ButterKnife.bind(this);
 
+        Intent intent = getIntent();
+        String city = intent.getStringExtra("city");
+
 //        CategoriesAdapter adapter = new CategoriesAdapter(this, details, pictures);
 //        list.setAdapter(adapter);
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent places = new Intent(CategoriesActivity.this, ParksActivity.class);
-                startActivity(places);
-            }
-        });
+//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent places = new Intent(CategoriesActivity.this, ParksActivity.class);
+//                startActivity(places);
+//            }
+//        });
 
-        Intent intent = getIntent();
-        String city = intent.getStringExtra("city");
+
 
 
         YelpApi client = YelpClient.getClient();
@@ -81,21 +88,13 @@ public class CategoriesActivity extends AppCompatActivity {
             public void onResponse(Call<ApiClass> call, Response<ApiClass> feedback) {
                 hideProgressBar();
                 if (feedback.isSuccessful()) {
-                    List<Business> sitesList = feedback.body().getBusinesses();
-                    String[] sites = new String[sitesList.size()];
-                    String[] categories = new String[sitesList.size()];
+                   sites = feedback.body().getBusinesses();
+                    listAdapter = new SitesListAdapter(CategoriesActivity.this,sites);
 
-                    for (int i = 0; i < sites.length; i++) {
-                        sites[i] = sitesList.get(i).getName();
-                    }
-
-                    for (int i = 0; i < categories.length; i++) {
-                        Category category = sitesList.get(i).getCategories().get(0);
-                        categories[i] = category.getTitle();
-                    }
-
-                    CategoriesAdapter adapter = new CategoriesAdapter(CategoriesActivity.this,android.R.layout.simple_list_item_1, sites, categories);
-                    list.setAdapter(adapter);
+                    mRecyclerView.setAdapter(listAdapter);
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CategoriesActivity.this);
+                    mRecyclerView.setLayoutManager(layoutManager);
+                    mRecyclerView.setHasFixedSize(true);
 
                     showSites();
                 }
@@ -107,7 +106,8 @@ public class CategoriesActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ApiClass> call, Throwable t) {
-//                Log.e(TAG, "onFailure:",t);
+                hideProgressBar();
+                showFailureMessage();
 
             }
 
@@ -126,7 +126,7 @@ public class CategoriesActivity extends AppCompatActivity {
     }
 
     private void showSites() {
-        list.setVisibility(View.VISIBLE);
+        mRecyclerView.setVisibility(View.VISIBLE);
 
     }
 
