@@ -34,7 +34,7 @@ public class Center {
         this.latitude = latitude;
     }
 
-    public Double getLongitude() {
+    private Double getLongitude() {
         return longitude;
     }
 
@@ -42,7 +42,7 @@ public class Center {
         this.longitude = longitude;
     }
 
-    public Double getLatitude() {
+    private Double getLatitude() {
         return latitude;
     }
 

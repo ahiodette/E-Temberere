@@ -1,6 +1,7 @@
 package com.moringaschool.e_temberere.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -29,12 +30,12 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link SiteDetailFragment.OnFragmentInteractionListener} interface
+
  * to handle interaction events.
  * Use the {@link SiteDetailFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SiteDetailFragment extends Fragment {
+public class SiteDetailFragment extends Fragment implements View.OnClickListener{
     @BindView(R.id.siteImageView) ImageView siteImage;
     @BindView(R.id.siteNameTextView) TextView siteName;
     @BindView(R.id.categoryTextView) TextView category;
@@ -45,16 +46,11 @@ public class SiteDetailFragment extends Fragment {
     @BindView(R.id.bookSiteButton) Button book;
 
     private Business site;
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
+
+
+
 
     public SiteDetailFragment() {
         // Required empty public constructor
@@ -72,9 +68,8 @@ public class SiteDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
             site = Parcels.unwrap(getArguments().getParcelable("site"));
-        }
+
     }
 
     @Override
@@ -95,49 +90,30 @@ public class SiteDetailFragment extends Fragment {
         siteName.setText(site.getName());
         category.setText(android.text.TextUtils.join(", ",siteCategories));
         rating.setText(Double.toString(site.getRating())+"/5");
-        phone.setText(site.getPhone());
-        address.setText(site.getLocation().toString());
+        website.setOnClickListener(this);
+        phone.setOnClickListener(this);
+        address.setOnClickListener(this);
 
 
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+    public void onClick(View v){
+        if(v==website){
+            Intent gotoWeb = new Intent(Intent.ACTION_VIEW, Uri.parse(site.getUrl()));
+            startActivity(gotoWeb);
         }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        if (v==phone){
+            Intent startCall = new Intent(Intent.ACTION_VIEW, Uri.parse("tel"+ site.getPhone()));
+            startActivity(startCall);
+        }
+        if (v==address){
+            Intent locate = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("location:"+ site.getCoordinates().getLatitude()
+                            +"," + site.getCoordinates().getLongitude()
+                            + "?q=(" + site.getName()+")"));
+            startActivity(locate);
+        }
     }
 }

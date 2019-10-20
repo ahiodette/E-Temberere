@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String city = location.getText().toString();
-                Toast.makeText(MainActivity.this,"Welcome to thousands hills country", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,"Explore the world!!!", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, CategoriesActivity.class);
                 intent.putExtra("city", city);
                 startActivity(intent);
