@@ -4,8 +4,10 @@ package com.moringaschool.e_temberere.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
+import org.parceler.Parcel;
 
+import java.util.List;
+@Parcel
 public class Business {
 
     @SerializedName("id")
