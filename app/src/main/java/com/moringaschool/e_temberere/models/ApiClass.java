@@ -4,19 +4,22 @@ package com.moringaschool.e_temberere.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 import java.util.List;
+@Parcel
 
 public class ApiClass {
 
     @SerializedName("businesses")
     @Expose
-    private List<Business> businesses = null;
+    public List<Business> businesses = null;
     @SerializedName("total")
     @Expose
-    private Integer total;
+    public Integer total;
     @SerializedName("region")
     @Expose
-    private Region region;
+    public Region region;
 
     /**
      * No args constructor for use in serialization
