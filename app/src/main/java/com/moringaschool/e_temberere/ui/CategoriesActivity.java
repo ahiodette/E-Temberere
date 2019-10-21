@@ -38,23 +38,6 @@ public class CategoriesActivity extends AppCompatActivity {
 
     public List<Business> sites;
 
-//    int[] pictures={
-//            R.drawable.park,
-//            R.drawable.muse,
-//            R.drawable.kivu,
-//            R.drawable.caves,
-//            R.drawable.genocide,
-//            R.drawable.round
-//    };
-//     String[] details = {
-//             "Parks and forests",
-//             "Museums",
-//             "Lakes",
-//             "Caves",
-//             "Genocide memorials",
-//             "Others places(Hotels, Cultural shops,...)"
-//     };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,19 +47,6 @@ public class CategoriesActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String city = intent.getStringExtra("city");
-
-//        CategoriesAdapter adapter = new CategoriesAdapter(this, details, pictures);
-//        list.setAdapter(adapter);
-
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Intent places = new Intent(CategoriesActivity.this, ParksActivity.class);
-//                startActivity(places);
-//            }
-//        });
-
-
 
 
         YelpApi client = YelpClient.getClient();
