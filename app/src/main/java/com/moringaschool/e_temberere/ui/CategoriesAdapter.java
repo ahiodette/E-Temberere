@@ -27,13 +27,6 @@ public class CategoriesAdapter extends ArrayAdapter {
     }
 
 
-    //    public CategoriesAdapter(Context print, String[] details, String[] pictures) {
-//        this.print = print;
-//        this.details = details;
-//        this.pictures = pictures;
-//    }
-
-
 
     @Override
     public Object getItem(int position) {
@@ -45,17 +38,5 @@ public class CategoriesAdapter extends ArrayAdapter {
         return 0;
     }
 
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//        LayoutInflater inflater = (LayoutInflater) print
-//                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//        View view = inflater.inflate(R.layout.customlayout, null);
-//        ImageView image = (ImageView) view.findViewById(R.id.sitePicture);
-//        TextView name = (TextView) view.findViewById(R.id.siteName);
-//
-//        image.setImageResource(pictures[position]);
-//        name.setText(details[position]);
-//        return view;
-//    }
+
 }

@@ -27,14 +27,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
 
- * to handle interaction events.
- * Use the {@link SiteDetailFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SiteDetailFragment extends Fragment implements View.OnClickListener{
     @BindView(R.id.siteImageView) ImageView siteImage;
     @BindView(R.id.siteNameTextView) TextView siteName;
