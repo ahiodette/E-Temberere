@@ -11,16 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SiteDetailsActivity"></activity>
+        <activity android:name=".ui.SignupActivity"></activity>
+        <activity android:name=".ui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.SiteDetailsActivity" />
         <activity android:name=".ui.ParksActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.e_temberere.ui.CategoriesActivity"></meta-data>
+                android:value="com.moringaschool.e_temberere.ui.CategoriesActivity" />
         </activity>
         <activity android:name=".ui.CategoriesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.moringaschool.e_temberere.ui.MainActivity"></meta-data>
+                android:value="com.moringaschool.e_temberere.ui.MainActivity" />
         </activity>
         <activity android:name=".ui.MainActivity">
             <intent-filter>
