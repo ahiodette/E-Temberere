@@ -13,7 +13,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.moringaschool.e_temberere.R;
 import com.moringaschool.e_temberere.models.Business;
 import com.moringaschool.e_temberere.models.Category;
@@ -107,6 +112,17 @@ public class SiteDetailFragment extends Fragment implements View.OnClickListener
                             +"," + site.getCoordinates().getLongitude()
                             + "?q=(" + site.getName()+")"));
             startActivity(locate);
+        }
+
+        if (v == book){
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            String userId = user.getUid();
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference(Unchangeable.FIREBASE_CHILD_SITES).child(userId);
+            String pushId = databaseReference.getKey();
+//            site.setPushId(pushId);
+            databaseReference.setValue(site);
+
+            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT);
         }
     }
 }

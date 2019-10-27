@@ -77,12 +77,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (view == loginButton){
             loginWithPassword();
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
         }
     }
 
     private void loginWithPassword(){
         String email = loginEmail.getText().toString().trim();
         String password = loginPassword.getText().toString().trim();
+        authent.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (!task.isSuccessful()){
+                    Toast.makeText(LoginActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         if (email.equals("")){
             loginEmail.setError("Please enter your Email");
             return;
