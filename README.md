@@ -1,12 +1,12 @@
 # E-Temberere
-A mobile app that helps tourists to know the touristic sites in Rwanda.
+A mobile app that helps tourists to know the touristic sites .
 
 ### Author:
 **Odette Ahishakiye** on October 11th, 2019.
 
 ## Descrition
-The **E-Temberere** is designed to help tourists to know the touristic sites in Rwanda from wherever they are.
-When you open the app, you see the area to insert where you are and then, you  are provided the places where you can travel to.
+The **E-Temberere** is designed to help tourists to know the touristic sites.
+When you open the app, you see the login form, and you can signup.After logging in, you get to the area where to insert where you want to travel to. Then, you  are provided the places where you can travel to and the travel sites that may help you travelling.
 
 ## Setup/Installation Requirements
         * Open your android mobile device (Phone, Tablet,..)
