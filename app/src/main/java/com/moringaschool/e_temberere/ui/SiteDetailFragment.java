@@ -51,7 +51,7 @@ public class SiteDetailFragment extends Fragment implements View.OnClickListener
 
 
     public SiteDetailFragment() {
-        // Required empty public constructor
+        
     }
 
 

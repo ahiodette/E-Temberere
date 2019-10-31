@@ -54,20 +54,20 @@ public class CategoriesActivity extends AppCompatActivity {
         Call<ApiClass> call = client.getSites(city, "travelling");
 
         call.enqueue(new Callback<ApiClass>() {
-            @Override
-            public void onResponse(Call<ApiClass> call, Response<ApiClass> feedback) {
-                hideProgressBar();
-                if (feedback.isSuccessful()) {
-                   sites = feedback.body().getBusinesses();
-                    listAdapter = new SitesListAdapter(CategoriesActivity.this,sites);
+                    @Override
+                    public void onResponse(Call<ApiClass> call, Response<ApiClass> feedback) {
+                        hideProgressBar();
+                        if (feedback.isSuccessful()) {
+                            sites = feedback.body().getBusinesses();
+                            listAdapter = new SitesListAdapter(CategoriesActivity.this,sites);
 
-                    mRecyclerView.setAdapter(listAdapter);
-                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CategoriesActivity.this);
-                    mRecyclerView.setLayoutManager(layoutManager);
-                    mRecyclerView.setHasFixedSize(true);
+                            mRecyclerView.setAdapter(listAdapter);
+                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CategoriesActivity.this);
+                            mRecyclerView.setLayoutManager(layoutManager);
+                            mRecyclerView.setHasFixedSize(true);
 
-                    showSites();
-                }
+                            showSites();
+                        }
                 else {
                     showUnsuccessfulMessage();
 
