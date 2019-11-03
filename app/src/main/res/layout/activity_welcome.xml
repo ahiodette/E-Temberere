@@ -7,27 +7,17 @@
     tools:context=".ui.WelcomeActivity">
 
     <ImageView
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/back"
-        android:src="@drawable/travel"
-        android:scaleType="centerCrop"/>
-
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="E-TEMBERERE"
-        android:textSize="40sp"
-        android:layout_marginTop="60dp"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/travel" />
 
     <TextView
         android:id="@+id/introduction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/welcome"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:text="This app helps you to travel wherever in USA"
         android:textAlignment="center"
@@ -35,9 +25,9 @@
 
     <Button
         android:id="@+id/welcomeButton"
-        android:layout_width="240dp"
-        android:layout_height="78dp"
-        android:layout_below="@id/welcome"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+
         android:layout_centerHorizontal="true"
         android:layout_marginTop="281dp"
         android:shadowRadius="70"

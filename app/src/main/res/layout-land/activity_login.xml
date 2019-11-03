@@ -4,32 +4,31 @@
     android:layout_height="match_parent" android:background="@color/colorPrimary">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout">
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="30dp">
 
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:background="@android:color/white"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
-            android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:background="@android:color/white"
             android:hint="Password"
             android:inputType="textPassword"
@@ -37,40 +36,41 @@
             android:padding="10dp"
             android:textColor="@android:color/black"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorAccent"
             android:padding="10dp"
             android:text="Log in"
-            android:background="@color/colorAccent"
-            android:layout_marginTop="15dp"
             android:textColor="@color/colorPrimary" />
 
         <TextView
+            android:id="@+id/signTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:textColor="@color/inyuguti"
-            android:textStyle="bold"
-            android:textSize="15sp"
             android:text="New user? Create account here!"
-            android:id="@+id/signTextView"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="@color/inyuguti"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
         android:text="Login"
         android:textColor="@color/inyuguti"
         android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:textStyle="bold" />
 
 </RelativeLayout>
