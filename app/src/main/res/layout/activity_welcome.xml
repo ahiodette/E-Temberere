@@ -33,7 +33,7 @@
         android:shadowRadius="70"
         android:text="START TRAVELLING"
         android:textAlignment="center"
-        android:background="@drawable/button"/>
+        android:background="@drawable/log"/>
 
 
 </RelativeLayout>
