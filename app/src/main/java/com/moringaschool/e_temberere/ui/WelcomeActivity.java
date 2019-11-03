@@ -22,9 +22,11 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         ButterKnife.bind(this);
+
+
         welcome.setOnClickListener(this);
         Animation shake = AnimationUtils.loadAnimation(this,R.anim.shake);
-        getStarted.startAnimation(shake);
+        welcome.startAnimation(shake);
     }
 
     @Override
