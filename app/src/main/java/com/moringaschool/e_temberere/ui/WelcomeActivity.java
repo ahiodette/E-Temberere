@@ -25,15 +25,17 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
 
 
         welcome.setOnClickListener(this);
-        Animation shake = AnimationUtils.loadAnimation(this,R.anim.shake);
+        Animation shake = AnimationUtils.loadAnimation(this,R.anim.lefttoright);
         welcome.startAnimation(shake);
     }
 
     @Override
     public void onClick(View v) {
         if (v==welcome){
+
             Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
             startActivity(intent);
+
         }
     }
 }
