@@ -27,13 +27,12 @@
         android:id="@+id/welcomeButton"
         android:layout_width="150dp"
         android:layout_height="30dp"
-
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="281dp"
+        android:layout_marginTop="290dp"
+        android:background="@drawable/log"
         android:shadowRadius="70"
         android:text="START TRAVELLING"
-        android:textAlignment="center"
-        android:background="@drawable/log"/>
+        android:textAlignment="center" />
 
 
 </RelativeLayout>
